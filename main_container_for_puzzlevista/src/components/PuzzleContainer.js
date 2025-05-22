@@ -26,7 +26,7 @@ const PuzzleContainer = () => {
   const [puzzlePieces, setPuzzlePieces] = useState([]);
   const [isComplete, setIsComplete] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
-  const [startTime, setStartTime] = useState(null);
+  const startTimeRef = useRef(null);
   const [currentTime, setCurrentTime] = useState('00:00');
   const timerRef = useRef(null);
   
@@ -55,7 +55,7 @@ const PuzzleContainer = () => {
   useEffect(() => {
     if (gameStarted && !isComplete) {
       const now = Date.now();
-      setStartTime(now);
+      startTimeRef.current = now;
       
       // Update timer every second
       timerRef.current = setInterval(() => {
@@ -107,7 +107,7 @@ const PuzzleContainer = () => {
     setIsComplete(false);
     setGameStarted(true);
     setStartTime(Date.now());
-  }, [boardSize, difficulty]);
+  }, [boardSize, difficulty, difficultySettings]);
   
   // Handle new puzzle button click
   const handleNewPuzzle = () => {
