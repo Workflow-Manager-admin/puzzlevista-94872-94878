@@ -325,6 +325,18 @@ body {
   animation: fadeIn 0.5s ease-in;
 }
 
+.puzzle-complete-overlay h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.puzzle-complete-overlay p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
