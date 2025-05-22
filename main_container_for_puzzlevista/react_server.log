@@ -153,3 +153,53 @@ Search for the keywords to learn more about each error.
 
 webpack compiled with 1 error and 1 warning
 Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/PuzzleContainer.js
+  Line 109:5:  'setStartTime' is not defined  no-undef
+  Line 150:5:  'setStartTime' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+WARNING in [eslint] 
+src/components/PuzzleContainer.js
+  Line 19:9:  The 'difficultySettings' object makes the dependencies of useCallback Hook (at line 110) change on every render. To fix this, wrap the initialization of 'difficultySettings' in its own useMemo() Hook  react-hooks/exhaustive-deps
+
+src/utils/puzzleUtils.js
+  Line 4:8:    '_' is defined but never used                                                             no-unused-vars
+  Line 71:36:  Function declared in a loop contains unsafe references to variable(s) 'x', 'x', 'y', 'y'  no-loop-func
+
+ERROR in [eslint] 
+src/components/PuzzleContainer.js
+  Line 109:5:  'setStartTime' is not defined  no-undef
+  Line 150:5:  'setStartTime' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/PuzzleContainer.js
+  Line 109:5:  'setStartTime' is not defined  no-undef
+  Line 150:5:  'setStartTime' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+WARNING in [eslint] 
+src/components/PuzzleContainer.js
+  Line 19:9:  The 'difficultySettings' object makes the dependencies of useCallback Hook (at line 110) change on every render. To fix this, wrap the initialization of 'difficultySettings' in its own useMemo() Hook  react-hooks/exhaustive-deps
+
+src/utils/puzzleUtils.js
+  Line 4:8:    '_' is defined but never used                                                             no-unused-vars
+  Line 71:36:  Function declared in a loop contains unsafe references to variable(s) 'x', 'x', 'y', 'y'  no-loop-func
+
+ERROR in [eslint] 
+src/components/PuzzleContainer.js
+  Line 109:5:  'setStartTime' is not defined  no-undef
+  Line 150:5:  'setStartTime' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 1 warning
+Compiling...

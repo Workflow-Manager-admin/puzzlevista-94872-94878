@@ -68,11 +68,13 @@ export const shufflePieces = (pieces, boardWidth, boardHeight) => {
       x = Math.random() * (boardWidth - pieceWidth);
       y = Math.random() * (boardHeight - pieceHeight);
       
+      const currentX = x;
+      const currentY = y;
       overlapping = positions.some(pos => 
-        x < pos.x + pos.width && 
-        x + pieceWidth > pos.x && 
-        y < pos.y + pos.height && 
-        y + pieceHeight > pos.y
+        currentX < pos.x + pos.width && 
+        currentX + pieceWidth > pos.x && 
+        currentY < pos.y + pos.height && 
+        currentY + pieceHeight > pos.y
       );
       
       attempts++;
