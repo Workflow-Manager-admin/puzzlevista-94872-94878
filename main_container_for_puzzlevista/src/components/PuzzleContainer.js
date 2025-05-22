@@ -16,11 +16,11 @@ import { ANCIENT_PUZZLE_IMAGE } from '../assets/ancient_puzzle';
 const PuzzleContainer = () => {
   // Puzzle configuration
   const [difficulty, setDifficulty] = useState('Medium');
-  const difficultySettings = {
+  const difficultySettings = React.useMemo(() => ({
     Easy: { rows: 3, columns: 3 },
     Medium: { rows: 4, columns: 4 },
     Hard: { rows: 5, columns: 5 }
-  };
+  }), []);
 
   // Puzzle state
   const [puzzlePieces, setPuzzlePieces] = useState([]);
