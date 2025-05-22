@@ -270,22 +270,41 @@ body {
 }
 
 .btn {
-  background-color: var(--kavia-orange);
+  background-color: var(--ancient-clay);
   color: white;
-  border: none;
+  border: 2px solid var(--ancient-gold);
   border-radius: 4px;
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s ease;
+  font-family: 'Palatino', serif;
 }
 
 .btn:hover {
-  background-color: #FF8B4D;
+  background-color: var(--ancient-gold);
+  color: var(--ancient-dark);
 }
 
 .btn-large {
   padding: 12px 24px;
   font-size: 1.1rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .controls-area {
+    flex-direction: column;
+  }
+  
+  .ancient-title {
+    font-size: 2.5rem;
+  }
+  
+  .ancient-title::before,
+  .ancient-title::after {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
 }
