@@ -1,32 +1,35 @@
 import React from 'react';
 import './App.css';
+import PuzzleContainer from './components/PuzzleContainer';
 
 function App() {
   return (
-    <div className="app">
+    <div className="app ancient-theme">
       <nav className="navbar">
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
             <div className="logo">
-              <span className="logo-symbol">*</span> KAVIA AI
+              <span className="logo-symbol">🧩</span> PuzzleVista
             </div>
-            <button className="btn">Template Button</button>
+            <div className="nav-links">
+              <button className="ancient-nav-button">Gallery</button>
+              <button className="ancient-nav-button">About</button>
+            </div>
           </div>
         </div>
       </nav>
 
-      <main>
+      <main className="puzzle-main">
         <div className="container">
-          <div className="hero">
-            <div className="subtitle">AI Workflow Manager Template</div>
-            
-            <h1 className="title">main_container_for_puzzlevista</h1>
-            
-            <div className="description">
-              Start building your application.
-            </div>
-            
-            <button className="btn btn-large">Button</button>
+          <div className="puzzle-header">
+            <h1 className="ancient-title">PuzzleVista</h1>
+            <div className="ancient-subtitle">Ancient Puzzles Await Your Wisdom</div>
+          </div>
+          
+          <PuzzleContainer />
+          
+          <div className="ancient-footer">
+            <p>"The puzzle of life becomes clearer with every piece connected."</p>
           </div>
         </div>
       </main>
