@@ -1,15 +1,26 @@
 :root {
+  /* Ancient theme colors */
+  --ancient-gold: #D4AF37;
+  --ancient-sand: #C2B280;
+  --ancient-papyrus: #F5E8C1;
+  --ancient-stone: #7D7463;
+  --ancient-clay: #9B6E23;
+  --ancient-dark: #4A3C2C;
+  --ancient-highlight: #FEC24C;
+  
+  /* Original colors kept for reference */
   --kavia-orange: #E87A41;
   --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --text-color: #2C1E0F;
+  --text-secondary: rgba(44, 30, 15, 0.85);
+  --border-color: var(--ancient-clay);
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  background-color: var(--kavia-dark);
+  font-family: 'Palatino', 'Georgia', 'Times New Roman', serif;
+  background-color: var(--ancient-papyrus);
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
