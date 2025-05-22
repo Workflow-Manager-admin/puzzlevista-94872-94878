@@ -1,7 +1,7 @@
 /**
  * Utility functions for puzzle operations
  */
-import _ from 'lodash';
+import { shuffle } from 'lodash';
 
 /**
  * Generate puzzle pieces from an image
