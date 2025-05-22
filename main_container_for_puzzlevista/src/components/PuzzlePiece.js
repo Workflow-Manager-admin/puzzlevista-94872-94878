@@ -15,9 +15,7 @@ const PuzzlePiece = ({ piece, onDrop, image }) => {
   const [{ isDragging }, drag] = useDrag({
     type: 'PUZZLE_PIECE',
     item: { ...piece, id: piece.id },
-    // We're no longer calculating position here as PuzzleBoard now handles this
-=======
-  // Configure drag behavior
+    // Position calculation now happens in the PuzzleBoard drop handler
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),

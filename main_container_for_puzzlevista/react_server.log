@@ -313,3 +313,6 @@ src/components/PuzzlePiece.js
   Line 19:  Parsing error: Unexpected token (19:0)
 
 webpack compiled with 2 errors
+Compiling...
+Compiled successfully!
+webpack compiled successfully
