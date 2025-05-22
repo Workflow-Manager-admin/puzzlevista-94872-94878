@@ -13,9 +13,43 @@ import { isPieceNearCorrectPosition } from '../utils/puzzleUtils';
  */
 const PuzzleBoard = ({ pieces, onPieceDrop, boardSize, image }) => {
   // Configure drop behavior for the entire board
+  const boardRef = React.useRef(null);
+  
   const [, drop] = useDrop({
     accept: 'PUZZLE_PIECE',
     drop: (item, monitor) => {
+      const boardRect = boardRef.current.getBoundingClientRect();
+      const clientOffset = monitor.getClientOffset();
+      
+      // Calculate position relative to the board
+      if (clientOffset) {
+        const position = {
+          x: clientOffset.x - boardRect.left,
+          y: clientOffset.y - boardRect.top,
+        };
+        
+        // Check if the piece is near its correct position
+        const piece = pieces.find(p => p.id === item.id);
+        if (piece) {
+          const shouldSnap = isPieceNearCorrectPosition(piece, position);
+          
+          // Update piece position and snapping status
+          const finalPosition = shouldSnap
+            ? {
+                x: piece.correctPosition.col * piece.width,
+                y: piece.correctPosition.row * piece.height,
+                isPlaced: true
+              }
+            : {
+                x: position.x - (piece.width / 2),
+                y: position.y - (piece.height / 2),
+                isPlaced: false
+              };
+          
+          onPieceDrop(item.id, finalPosition);
+        }
+      }
+      
       return { moved: true };
     },
     collect: (monitor) => ({
