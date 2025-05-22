@@ -104,16 +104,27 @@ export const shufflePieces = (pieces, boardWidth, boardHeight) => {
  * @param {number} threshold - Distance threshold for snapping in pixels
  * @returns {boolean} True if the piece is near its correct position
  */
-export const isPieceNearCorrectPosition = (piece, dropPosition, threshold = 20) => {
+export const isPieceNearCorrectPosition = (piece, dropPosition, threshold = 40) => {
   const correctX = piece.correctPosition.col * piece.width;
   const correctY = piece.correctPosition.row * piece.height;
   
+  // Calculate center position of the piece at drop location
+  const dropCenterX = dropPosition.x;
+  const dropCenterY = dropPosition.y;
+  
+  // Calculate center of the correct position
+  const correctCenterX = correctX + (piece.width / 2);
+  const correctCenterY = correctY + (piece.height / 2);
+  
   const distance = Math.sqrt(
-    Math.pow(dropPosition.x - correctX, 2) + 
-    Math.pow(dropPosition.y - correctY, 2)
+    Math.pow(dropCenterX - correctCenterX, 2) + 
+    Math.pow(dropCenterY - correctCenterY, 2)
   );
   
-  return distance < threshold;
+  // Adjust threshold based on piece size
+  const dynamicThreshold = Math.max(threshold, Math.min(piece.width, piece.height) * 0.25);
+  
+  return distance < dynamicThreshold;
 };
 
 /**
