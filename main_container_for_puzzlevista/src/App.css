@@ -292,6 +292,76 @@ body {
   font-size: 1.1rem;
 }
 
+/* Puzzle-specific styles */
+.puzzle-board {
+  user-select: none;
+}
+
+.puzzle-piece {
+  border-radius: 2px;
+  transition: transform 0.1s ease;
+}
+
+.puzzle-piece:hover {
+  z-index: 20;
+  transform: scale(1.02);
+}
+
+.puzzle-complete-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(212, 175, 55, 0.8);
+  border-radius: 4px;
+  z-index: 100;
+  color: var(--ancient-dark);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.difficulty-selector {
+  margin-top: 10px;
+}
+
+.difficulty-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.difficulty-button {
+  flex: 1;
+  padding: 5px;
+  background: var(--ancient-papyrus);
+  border: 1px solid var(--ancient-clay);
+  color: var(--ancient-clay);
+  font-family: 'Palatino', serif;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.difficulty-button:hover {
+  background: var(--ancient-sand);
+}
+
+.active-difficulty {
+  background: var(--ancient-gold);
+  color: var(--ancient-dark);
+  font-weight: bold;
+}
+
 /* Media queries for responsive design */
 @media (max-width: 768px) {
   .controls-area {
