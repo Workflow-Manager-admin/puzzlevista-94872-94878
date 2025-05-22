@@ -153,7 +153,10 @@ const PuzzleBoard = ({ pieces, onPieceDrop, boardSize, image }) => {
   };
 
   return (
-    <div ref={drop} style={boardStyle} className="puzzle-board">
+    <div ref={node => {
+      boardRef.current = node;
+      drop(node);
+    }} style={boardStyle} className="puzzle-board">
       <svg style={gridOverlayStyle}>
         {createGridLines()}
       </svg>
