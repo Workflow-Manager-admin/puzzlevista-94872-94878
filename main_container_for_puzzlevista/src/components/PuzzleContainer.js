@@ -59,7 +59,7 @@ const PuzzleContainer = () => {
       
       // Update timer every second
       timerRef.current = setInterval(() => {
-        setCurrentTime(formatElapsedTime(now));
+        setCurrentTime(formatElapsedTime(startTimeRef.current));
       }, 1000);
     } else if (isComplete && timerRef.current) {
       clearInterval(timerRef.current);
@@ -106,7 +106,7 @@ const PuzzleContainer = () => {
     setPuzzlePieces(shuffledPieces);
     setIsComplete(false);
     setGameStarted(true);
-    setStartTime(Date.now());
+    startTimeRef.current = Date.now();
   }, [boardSize, difficulty, difficultySettings]);
   
   // Handle new puzzle button click
@@ -147,7 +147,7 @@ const PuzzleContainer = () => {
     
     // Reset game state
     setIsComplete(false);
-    setStartTime(Date.now());
+    startTimeRef.current = Date.now();
   };
   
   // Handle piece drop event
