@@ -87,42 +87,186 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
   width: 100%;
   box-sizing: border-box;
 }
 
-.hero {
-  padding-top: 120px;
-  padding-bottom: 64px;
+.puzzle-main {
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+
+.puzzle-header {
   text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.ancient-title {
+  font-size: 3.5rem;
+  font-weight: normal;
+  color: var(--ancient-clay);
+  margin: 0;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-block;
+}
+
+.ancient-title::before,
+.ancient-title::after {
+  content: "☥";
+  color: var(--ancient-gold);
+  font-size: 2rem;
+  position: relative;
+  top: -5px;
+  margin: 0 15px;
+}
+
+.ancient-subtitle {
+  color: var(--ancient-stone);
+  font-weight: normal;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+/* PuzzleVista container styles */
+.puzzle-vista-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.ancient-border {
+  border: 12px solid transparent;
+  border-image: repeating-linear-gradient(
+    45deg,
+    var(--ancient-gold),
+    var(--ancient-gold) 10px,
+    var(--ancient-clay) 10px,
+    var(--ancient-clay) 20px
+  ) 12;
+  padding: 15px;
+  background-color: var(--ancient-sand);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.ancient-border::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid var(--ancient-gold);
+  pointer-events: none;
+}
+
+.puzzle-area {
+  aspect-ratio: 4/3;
+  width: 100%;
+  background-color: var(--ancient-papyrus);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.puzzle-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  justify-content: center;
+  color: var(--ancient-clay);
+  opacity: 0.7;
 }
 
-.subtitle {
-  color: var(--kavia-orange);
-  font-weight: 500;
-  font-size: 1.1rem;
+.hieroglyph-icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
 }
 
-.title {
-  font-size: 3.5rem;
-  font-weight: 600;
-  line-height: 1.2;
-  margin: 0;
+.controls-area {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.description {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin-bottom: 16px;
+.control-panel, 
+.puzzle-info {
+  flex: 1;
+  min-width: 200px;
+  background-color: var(--ancient-sand);
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--ancient-clay);
+}
+
+.ancient-text {
+  color: var(--ancient-dark);
+  font-weight: normal;
+  text-align: center;
+  margin-top: 0;
+  border-bottom: 1px solid var(--ancient-clay);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.ancient-button {
+  display: block;
+  width: 100%;
+  background-color: var(--ancient-dark);
+  color: var(--ancient-gold);
+  border: 1px solid var(--ancient-gold);
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-family: 'Palatino', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ancient-button:hover {
+  background-color: var(--ancient-gold);
+  color: var(--ancient-dark);
+}
+
+.info-tile {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.info-label {
+  font-weight: bold;
+  color: var(--ancient-dark);
+}
+
+.info-value {
+  color: var(--ancient-clay);
+}
+
+.ancient-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-style: italic;
+  color: var(--ancient-stone);
+  padding: 20px;
+  border-top: 1px solid var(--ancient-clay);
 }
 
 .btn {
