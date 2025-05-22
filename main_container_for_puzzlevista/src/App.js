@@ -28,7 +28,9 @@ function App() {
             <div className="ancient-subtitle">Ancient Puzzles Await Your Wisdom</div>
           </div>
           
-          <PuzzleContainer />
+          <DndProvider backend={HTML5Backend}>
+            <PuzzleContainer />
+          </DndProvider>
           
           <div className="ancient-footer">
             <p>"The puzzle of life becomes clearer with every piece connected."</p>
