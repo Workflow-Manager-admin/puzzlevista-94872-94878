@@ -19,3 +19,78 @@ To create a production build, use npm run build.
 
 webpack compiled successfully
 Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/PuzzlePiece.js
+Syntax error: Unexpected token (19:0) (19:undefined)
+ERROR in ./src/components/PuzzlePiece.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/src/components/PuzzlePiece.js: Unexpected token (19:0)
+
+  17 |     item: { ...piece, id: piece.id },
+  18 |     // We're no longer calculating position here as PuzzleBoard now handles this
+> 19 | =======
+     | ^
+  20 |   // Configure drag behavior
+  21 |     collect: (monitor) => ({
+  22 |       isDragging: !!monitor.isDragging(),
+    at constructor (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:360:19)
+    at FlowParserMixin.raise (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:3327:19)
+    at FlowParserMixin.unexpected (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:3347:16)
+    at FlowParserMixin.parsePropertyName (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:11707:18)
+    at FlowParserMixin.parsePropertyDefinition (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:11575:10)
+    at FlowParserMixin.parseObjectLike (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:11516:21)
+    at FlowParserMixin.parseExprAtom (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:11024:23)
+    at FlowParserMixin.parseExprAtom (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:6937:20)
+    at FlowParserMixin.parseExprSubscripts (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10758:23)
+    at FlowParserMixin.parseUpdate (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10743:21)
+    at FlowParserMixin.parseMaybeUnary (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10723:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10576:61)
+    at FlowParserMixin.parseExprOps (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10581:23)
+    at FlowParserMixin.parseMaybeConditional (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10558:23)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10521:21)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:5773:18)
+    at /home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10491:39
+    at FlowParserMixin.allowInAnd (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:12100:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10491:17)
+    at FlowParserMixin.parseExprListItem (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:11858:18)
+    at FlowParserMixin.parseCallExpressionArguments (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10927:22)
+    at FlowParserMixin.parseCoverCallAndAsyncArrowHead (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10861:29)
+    at FlowParserMixin.parseSubscript (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10798:19)
+    at FlowParserMixin.parseSubscript (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:5874:18)
+    at FlowParserMixin.parseSubscripts (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10771:19)
+    at FlowParserMixin.parseSubscripts (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:5840:18)
+    at FlowParserMixin.parseExprSubscripts (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10762:17)
+    at FlowParserMixin.parseUpdate (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10743:21)
+    at FlowParserMixin.parseMaybeUnary (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10723:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10576:61)
+    at FlowParserMixin.parseExprOps (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10581:23)
+    at FlowParserMixin.parseMaybeConditional (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10558:23)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10521:21)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:5773:18)
+    at /home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10491:39
+    at FlowParserMixin.allowInAnd (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:12095:16)
+    at FlowParserMixin.parseMaybeAssignAllowIn (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:10491:17)
+    at FlowParserMixin.parseVar (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:13028:91)
+    at FlowParserMixin.parseVarStatement (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:12874:10)
+    at FlowParserMixin.parseStatementContent (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:12489:23)
+    at FlowParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:12406:17)
+    at FlowParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:5140:24)
+    at FlowParserMixin.parseStatementListItem (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:12386:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:12960:61)
+    at FlowParserMixin.parseBlockBody (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:12953:10)
+    at FlowParserMixin.parseBlock (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:12941:10)
+    at FlowParserMixin.parseFunctionBody (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:11783:24)
+    at /home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:5114:63
+    at FlowParserMixin.forwardNoArrowParamsConversionAt (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:5290:16)
+    at FlowParserMixin.parseFunctionBody (/home/kavia/workspace/code-generation/puzzlevista-94872-94878/main_container_for_puzzlevista/node_modules/@babel/parser/lib/index.js:5114:12)
+
+ERROR in [eslint] 
+src/components/PuzzlePiece.js
+  Line 19:  Parsing error: Unexpected token (19:0)
+
+webpack compiled with 2 errors

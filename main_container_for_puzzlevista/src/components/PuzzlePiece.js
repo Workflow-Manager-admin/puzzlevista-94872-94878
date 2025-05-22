@@ -14,28 +14,10 @@ const PuzzlePiece = ({ piece, onDrop, image }) => {
   // Configure drag behavior
   const [{ isDragging }, drag] = useDrag({
     type: 'PUZZLE_PIECE',
-    item: { ...piece },
-    end: (item, monitor) => {
-      const dropResult = monitor.getDropResult();
-      if (item && dropResult) {
-        // Get final drop position
-        const clientOffset = monitor.getClientOffset();
-        const initialClientOffset = monitor.getInitialClientOffset();
-        const initialSourceClientOffset = monitor.getInitialSourceClientOffset();
-        
-        if (clientOffset && initialClientOffset && initialSourceClientOffset) {
-          // Calculate the final position
-          const deltaX = clientOffset.x - initialClientOffset.x;
-          const deltaY = clientOffset.y - initialClientOffset.y;
-          
-          const newX = piece.x + deltaX;
-          const newY = piece.y + deltaY;
-          
-          // Call the onDrop callback with the new position
-          onDrop(piece.id, { x: newX, y: newY });
-        }
-      }
-    },
+    item: { ...piece, id: piece.id },
+    // We're no longer calculating position here as PuzzleBoard now handles this
+=======
+  // Configure drag behavior
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
