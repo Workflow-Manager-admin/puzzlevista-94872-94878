@@ -54,7 +54,8 @@ export const generatePuzzlePieces = (image, rows, columns, boardWidth, boardHeig
  * @returns {Array} Array of shuffled puzzle piece objects
  */
 export const shufflePieces = (pieces, boardWidth, boardHeight) => {
-  const shuffled = [...pieces];
+  // Use lodash shuffle to randomize piece order
+  const shuffled = shuffle([...pieces]);
   const positions = [];
   
   for (let i = 0; i < shuffled.length; i++) {
