@@ -57,28 +57,9 @@ const PuzzleBoard = ({ pieces, onPieceDrop, boardSize, image }) => {
     })
   });
 
-  // Handle when a piece is dropped
+  // Handle direct piece interactions
   const handlePieceDrop = (pieceId, newPosition) => {
-    const piece = pieces.find(p => p.id === pieceId);
-    if (piece) {
-      // Check if piece is near its correct position for snapping
-      const shouldSnap = isPieceNearCorrectPosition(piece, newPosition);
-      
-      // Update piece position and snapping status
-      const finalPosition = shouldSnap
-        ? {
-            x: piece.correctPosition.col * piece.width,
-            y: piece.correctPosition.row * piece.height,
-            isPlaced: true
-          }
-        : {
-            x: newPosition.x,
-            y: newPosition.y,
-            isPlaced: false
-          };
-      
-      onPieceDrop(pieceId, finalPosition);
-    }
+    onPieceDrop(pieceId, newPosition);
   };
 
   // Styling for the puzzle board
